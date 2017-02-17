@@ -47,6 +47,18 @@ app.post('/api/genres', (req, res) => {
     });
 });
 
+// Delete Particular Genre
+
+app.delete('/api/Genre/:id', (req, res) => {
+    Genre.removeGenre(req.params.id, (err, selectedGenre) => {
+        if(err) {
+            throw err;
+        } else {
+            res.json(selectedGenre);
+        }
+    })
+});
+
 // Get All Books
 
 app.get('/api/books', (req, res) => {
@@ -76,6 +88,18 @@ app.post('/api/books', (req, res) => {
 
 app.get('/api/book/:id', (req, res) => {
     Book.getBookById(req.params.id, (err, selectedBook) => {
+        if(err) {
+            throw err;
+        } else {
+            res.json(selectedBook);
+        }
+    })
+});
+
+// Delete Particular Book
+
+app.delete('/api/book/:id', (req, res) => {
+    Book.removeBook(req.params.id, (err, selectedBook) => {
         if(err) {
             throw err;
         } else {

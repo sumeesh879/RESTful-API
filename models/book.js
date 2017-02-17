@@ -52,3 +52,10 @@ module.exports.getBookById = (bookId, callback) => {
 module.exports.addBook = (newBook, callback) => {
     Book.create(newBook, callback);
 }
+
+// Delete Book
+
+module.exports.removeBook = (id, callback) => {
+	var query = {_id: id};
+	Book.remove(query, callback);
+}
