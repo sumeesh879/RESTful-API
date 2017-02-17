@@ -1,0 +1,30 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "RESTful api for bookstore",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumeesh879/RESTful-API.git"
+  },
+  "keywords": [
+    "nodejs",
+    "mongodb",
+    "mongoose",
+    "expressjs"
+  ],
+  "author": "Sumeesh Nagisetty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumeesh879/RESTful-API/issues"
+  },
+  "homepage": "https://github.com/sumeesh879/RESTful-API#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.3"
+  }
+}
