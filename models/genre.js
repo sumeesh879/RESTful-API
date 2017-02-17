@@ -27,6 +27,16 @@ module.exports.addGenre = (newGenre, callback) => {
     Genre.create(newGenre, callback);
 }
 
+// Update Genre
+
+module.exports.updateGenre = (id, newGenre, options, callback) => {
+    var query = { _id : id };
+    var update = {
+        name : newGenre.name
+    }
+    Genre.findOneAndUpdate(query, update, options, callback);
+}
+
 // Delete Genre
 
 module.exports.removeGenre = (id, callback) => {
